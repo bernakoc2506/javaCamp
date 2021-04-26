@@ -1,0 +1,10 @@
+# javaCamp
+package javaOdev;
+
+public class CourseManager {
+	public void addToCart(Course course) {
+		System.out.println("Sepete Ekleme Kodu Cagirildi"+ course.name);
+	
+	}
+
+}
