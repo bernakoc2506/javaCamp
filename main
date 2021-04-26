@@ -1,53 +1,43 @@
-# javaCamp
-package oopIntro;
+#JavaCamp
+package javaOdev;
 
-public class main {
+import java.util.Iterator;
+
+public class main1 {
 
 	public static void main(String[] args) {
-		
-		Product product1 = new Product(1,"Lenovo V14",15000,"16 GB Ram"); //referans,örnek oluşturma. intance
-		
-		
-		Product product2 = new Product(); 
-		product2.id=2;
-		product2.name="Lenovo V15";
-		product2.unitPrice= 16000;
-		product2.detail="32 GB RAM";
+		Course course1 = new Course(1,"C#","Yazilim gelistirici yetistirme kampi");
 		
 		
-		Product product3 = new Product();
-		product3.id=3;
-		product3.name="Hp 5";
-		product3.unitPrice= 10000;
-		product3.detail="8 GB RAM";
+		Course course2 = new Course(2, "Java","Java*React");
 		
-		Product [] products = {product1,product2,product3};
-		for(Product product : products) {
-			
-			System.out.println(product.name);
+		Course course3 = new Course(3,"Programlamaya giris icin temel kurs","Temel programlama mantigini ogretir");
+		
+		Course[] courses= {course1,course2,course3};
+		
+		for(Course course: courses) {
+			System.out.println(course.name);
 		}
 		
-		System.out.println(products.length);
+		System.out.println(courses.length);	
 		
+		Instructor instructor1 = new Instructor(12345,"Engin","Demiroğ","Ankara'da yasiyor");
+		Instructor instructor2= new Instructor(1234567,"Berna","Koc","ogrenci");
 		
-		Category category1 = new Category ();
-		category1.id= 1;
-		category1.name= "Bilgisayar";
+		Instructor[] instructors= {instructor1,instructor2};
+		for (Instructor instructor : instructors) {
+			System.out.println(instructor.name);
+			
+			CourseManager courseManager= new CourseManager();
+			courseManager.addToCart(course1);
+			courseManager.addToCart(course2);
+			courseManager.addToCart(course3);
+			
 		
-		Category category2 = new Category ();
-		category2.id= 2;
-		category2.name="Ev/Bahce";
+	} 
 		
-		ProductManager productManager= new ProductManager();
-		productManager.addToCart(product1);
+	
 		
-		productManager.addToCart(product2);
-		
-		productManager.addToCart(product3);
-		
-		
-		
-		
-	}
-
+		}
+	
 }
