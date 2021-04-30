@@ -1,0 +1,24 @@
+public class main {
+
+	public static void main(String[] args) {
+	Student student = new Student ();
+		student.id =1;
+		student.firsName= "Berna ";
+		student.lastName = "Koç ";
+		student.level="1";
+		
+		Instructor instructor = new Instructor ();
+		instructor.id= 1;
+		instructor.firstName= "Engin ";
+		instructor.lastName= "Demiroğ ";
+		instructor.age= "30";
+		
+		StudentManager studentmanager = new StudentManager();
+		studentmanager.add(student);
+		
+		InstructorManager instructorManager= new InstructorManager();
+		instructorManager.add(instructor);
+		
+	}
+
+}
